@@ -1,0 +1,7 @@
+/*
+!/.gitignore
+!/README.md
+!/permessi_learner_lab.md
+!/labs/
+/labs/*
+!/labs/01_fondamenti_sicurezza.md
