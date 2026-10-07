@@ -12,19 +12,19 @@ Common Learner Lab permissions and cleanup rules are summarized here: [permessi_
 
 Labs are released individually. Currently available:
 
-| Lab | Topic |
-| --- | --- |
-| [01](labs/01_fondamenti_sicurezza.md) | Fondamenti di sicurezza |
-| [02](labs/02_regioni_crittografia.md) | Regioni e crittografia dei dati |
-| [03](labs/03_compliance_kms_identita.md) | Compliance, KMS e identita |
-| [04](labs/04_iam_mfa_policy.md) | IAM: buone pratiche, MFA e policy JSON |
-| [05](labs/05_scp_access_analyzer.md) | SCP e analisi degli accessi |
-| [06](labs/06_vpc_filtri_rete.md) | VPC e filtri di rete |
-| [07](labs/07_connessioni_cloudtrail.md) | Connessioni sicure e CloudTrail |
-| [08](labs/08_cloudwatch_config.md) | CloudWatch e AWS Config |
-| [09](labs/09_waf_shield_segreti.md) | WAF, Shield e gestione dei segreti |
-| [10](labs/10_guardduty_inspector.md) | GuardDuty e Inspector |
-| [11](labs/11_backup_ripristino.md) | Backup e ripristino sicuro |
+| Lab                                      | Topic                                  |
+| ---------------------------------------- | -------------------------------------- |
+| [01](labs/01_fondamenti_sicurezza.md)    | Fondamenti di sicurezza                |
+| [02](labs/02_regioni_crittografia.md)    | Regioni e crittografia dei dati        |
+| [03](labs/03_compliance_kms_identita.md) | Compliance, KMS e identita             |
+| [04](labs/04_iam_mfa_policy.md)          | IAM: buone pratiche, MFA e policy JSON |
+| [05](labs/05_scp_access_analyzer.md)     | SCP e analisi degli accessi            |
+| [06](labs/06_vpc_filtri_rete.md)         | VPC e filtri di rete                   |
+| [07](labs/07_connessioni_cloudtrail.md)  | Connessioni sicure e CloudTrail        |
+| [08](labs/08_cloudwatch_config.md)       | CloudWatch e AWS Config                |
+| [09](labs/09_waf_shield_segreti.md)      | WAF, Shield e gestione dei segreti     |
+| [10](labs/10_guardduty_inspector.md)     | GuardDuty e Inspector                  |
+| [11](labs/11_backup_ripristino.md)       | Backup e ripristino sicuro             |
 
 ## 👨‍💻 Author
 
