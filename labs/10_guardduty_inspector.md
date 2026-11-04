@@ -13,9 +13,9 @@ Esplorare per la prima volta GuardDuty e Inspector, produrre evidenze analizzabi
 
 ## Scenario
 
-Se GuardDuty o Inspector sono stati appena aperti, i contatori possono essere tutti a zero. Lo zero non dimostra che l'ambiente sia sicuro: può indicare assenza di eventi, servizio non attivo, regione errata o nessuna risorsa coperta. Il laboratorio separa quindi tre attività:
+Se GuardDuty è stato appena aperto, i contatori possono essere tutti a zero. Il laboratorio produce finding GuardDuty di esempio e usa casi Inspector forniti, senza richiedere l'attivazione di Inspector.
 
-1. osservare lo stato reale dei servizi;
+1. osservare lo stato reale di GuardDuty;
 2. generare finding SAMPLE in GuardDuty;
 3. analizzare casi Inspector realistici quando non esistono risorse scansionabili.
 
@@ -24,14 +24,7 @@ Se GuardDuty o Inspector sono stati appena aperti, i contatori possono essere tu
 1. Verificare che la regione selezionata sia `us-east-1`.
 2. Aprire **GuardDuty > Summary** e annotare: stato del servizio, totale finding, risorse con finding e data dell'ultimo aggiornamento.
 3. Aprire **GuardDuty > Settings** e verificare se esiste un detector. Non modificare un detector condiviso.
-4. Aprire **Inspector > Dashboard**, **Findings** e **Account management/Coverage**, se accessibili.
-5. Annotare separatamente:
-   - numero di finding;
-   - numero di risorse coperte;
-   - tipi di scansione attivi o non attivi;
-   - eventuali messaggi `Access denied`, servizio non attivo o nessuna risorsa idonea.
-
-Checkpoint: `0 finding` e `0 risorse coperte` sono informazioni diverse e non devono essere interpretate allo stesso modo.
+4. Annotare il numero di finding GuardDuty e l'eventuale messaggio di servizio non attivo o `Access denied`.
 
 ## Parte B - GuardDuty con finding SAMPLE
 
@@ -84,21 +77,7 @@ aws guardduty create-sample-findings \
 
 Se la console o la CLI nega l'operazione, registrare l'errore senza modificare IAM e passare alla Parte C.
 
-## Parte C - Inspector: stato reale e copertura
-
-Non attivare Inspector2 nel Learner Lab se non è esplicitamente autorizzato.
-
-1. In **Inspector > Dashboard**, registrare ciò che è visibile anche quando i valori sono zero.
-2. In **Findings**, verificare se l'elenco è vuoto o non accessibile.
-3. In **Account management/Coverage**, cercare risorse EC2, immagini ECR o funzioni Lambda coperte.
-4. Classificare lo stato osservato scegliendo una sola frase:
-   - servizio attivo, risorse coperte, nessun finding;
-   - servizio attivo, ma nessuna risorsa coperta;
-   - servizio non attivo;
-   - stato non verificabile per autorizzazioni insufficienti.
-5. Scrivere quale evidenza aggiuntiva servirebbe prima di affermare che l'ambiente non contiene vulnerabilità note.
-
-## Parte D - Triage Inspector su casi forniti
+## Parte C - Triage Inspector su casi forniti
 
 I casi seguenti sono sintetici, ma contengono dati sufficienti per svolgere un triage completo.
 
@@ -124,12 +103,11 @@ I casi seguenti sono sintetici, ma contengono dati sufficienti per svolgere un t
 
 Creare `consegna10.md` con:
 
-1. stato iniziale di GuardDuty e Inspector;
+1. stato iniziale di GuardDuty;
 2. schede G1 e G2, oppure motivazione documentata dell'impossibilità di generarle;
-3. classificazione dello stato di copertura Inspector;
-4. priorità V1, V3, V2 e trattamento di V4;
-5. responsabile, intervento, tempo, prova di chiusura e rischio residuo per ogni caso;
-6. distinzione esplicita tra dato reale osservato e caso SAMPLE/sintetico.
+3. priorità V1, V3, V2 e trattamento di V4;
+4. responsabile, intervento, tempo, prova di chiusura e rischio residuo per ogni caso;
+5. distinzione esplicita tra dato reale osservato e caso SAMPLE/sintetico.
 
 ## Checkpoint
 
