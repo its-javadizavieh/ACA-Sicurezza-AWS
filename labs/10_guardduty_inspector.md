@@ -16,7 +16,7 @@ Esplorare per la prima volta GuardDuty e Inspector, produrre evidenze analizzabi
 Se GuardDuty o Inspector sono stati appena aperti, i contatori possono essere tutti a zero. Lo zero non dimostra che l'ambiente sia sicuro: può indicare assenza di eventi, servizio non attivo, regione errata o nessuna risorsa coperta. Il laboratorio separa quindi tre attività:
 
 1. osservare lo stato reale dei servizi;
-2. generare finding SAMPLE in GuardDuty, quando consentito;
+2. generare finding SAMPLE in GuardDuty;
 3. analizzare casi Inspector realistici quando non esistono risorse scansionabili.
 
 ## Parte A - Orientamento nella console
@@ -67,7 +67,7 @@ Elencare i detector:
 aws guardduty list-detectors --region us-east-1
 ```
 
-Solo se non esiste un detector e il docente autorizza creazione e costi:
+Solo se non esiste un detector e l'ambiente consente la creazione e gli eventuali costi:
 
 ```bash
 aws guardduty create-detector --enable --region us-east-1
@@ -141,7 +141,7 @@ Creare `consegna10.md` con:
 
 ## Troubleshooting rapido
 
-- **Summary tutto a zero:** verificare regione, stato del detector e data di aggiornamento; poi generare sample se consentito.
+- **Summary tutto a zero:** verificare regione, stato del detector e data di aggiornamento; poi generare sample.
 - **Sample non visibili:** aprire Findings, rimuovere filtri incompatibili e cercare `[SAMPLE]`.
 - **Detector condiviso:** sola lettura; non eliminarlo e non modificarne le impostazioni.
 - **Inspector vuoto:** controllare prima Coverage; distinguere nessun finding da nessuna risorsa analizzata.
@@ -149,7 +149,7 @@ Creare `consegna10.md` con:
 
 ## Cleanup obbligatorio
 
-- Archiviare i sample se il docente vuole mantenere il detector e l'account lo consente.
+- Archiviare i sample se il detector deve essere mantenuto e l'account consente l'operazione.
 - Eliminare il detector solo se è stato creato personalmente durante questo lab:
 
 ```bash
